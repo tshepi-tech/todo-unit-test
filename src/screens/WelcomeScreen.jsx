@@ -4,7 +4,7 @@ import React from "react";
 //Project files
 //import welcomescreen from "../jsonFiles/welcomescreen.json";
 
-export default function WelcomeScreen() {
+export default function WelcomeScreen({ setShowModal }) {
   return (
     <div>
       <img src="" alt="alt text for logo" />
@@ -19,7 +19,7 @@ export default function WelcomeScreen() {
         the name and the price of the item you want to add. You can also and an
         image after the item is added by touching the camera icon
       </p>
-      <button>Add Item</button>
+      <button onClick={() => setShowModal(true)}>Add Item</button>
     </div>
   );
 }

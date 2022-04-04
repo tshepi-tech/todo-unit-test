@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 
-import WelcomeScreen from "../components/WelcomeScreen";
+import WelcomeScreen from "../screens/WelcomeScreen";
 
 test("renders the title of the page", async () => {
   render(<WelcomeScreen title="EIKA's shopping list" />);
