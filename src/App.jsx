@@ -11,11 +11,14 @@ export default function App() {
   //Local state
   const [list, setList] = useState([]);
 
+  //Properties
+  const listLength = list.length;
+
   return (
     <div className="App">
       <h1>Todo unit test</h1>
-      {list.length > 0 && <ShoppingListScreen />}
-      {list.length === 0 && <WelcomeScreen />}
+      {listLength > 0 && <ShoppingListScreen />}
+      {listLength === 0 && <WelcomeScreen />}
     </div>
   );
 }
