@@ -16,7 +16,6 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>Todo unit test</h1>
       {listLength > 0 && <ShoppingListScreen />}
       {listLength === 0 && <WelcomeScreen />}
     </div>
