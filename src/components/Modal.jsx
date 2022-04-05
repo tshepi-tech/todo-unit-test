@@ -3,6 +3,7 @@ import React from "react";
 import { ReactDOM } from "react";
 
 //Project files
+import InputField from "./InputField";
 
 export default function Modal({ showModal, onClose }) {
   //Safegaurd
@@ -14,6 +15,9 @@ export default function Modal({ showModal, onClose }) {
       <div className="modal_styles">
         <button onClick={onClose}>Close modal</button>
         <p>Add a new product</p>
+        <form>
+          <InputField />
+        </form>
       </div>
     </>
   );
