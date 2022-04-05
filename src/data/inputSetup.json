@@ -1,0 +1,14 @@
+{
+  "name": {
+    "label": "Product name",
+    "placeholder": "Leather sofa",
+    "required": true,
+    "type": "text"
+  },
+  "price": {
+    "label": "Product price",
+    "placeholder": "Ex: 3500",
+    "required": true,
+    "type": "number"
+  }
+}
