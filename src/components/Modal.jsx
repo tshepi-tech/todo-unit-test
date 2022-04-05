@@ -20,6 +20,7 @@ export default function Modal({ listState, modalState }) {
     event.preventDefault();
 
     onAddItem(name, price);
+    resetForm();
   }
 
   function onAddItem(name, price) {
@@ -30,7 +31,12 @@ export default function Modal({ listState, modalState }) {
       completed: false,
     };
     setList([...list, newItem]);
-    console.log(list);
+  }
+
+  function resetForm() {
+    setName("");
+    setPrice("");
+    setShowModal(false);
   }
 
   //Safegaurd
