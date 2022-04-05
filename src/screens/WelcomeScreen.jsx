@@ -5,7 +5,7 @@ import React from "react";
 //import welcomescreen from "../jsonFiles/welcomescreen.json";
 import Modal from "../components/Modal";
 
-export default function WelcomeScreen({ showModal, setShowModal }) {
+export default function WelcomeScreen({ setShowModal }) {
   return (
     <div>
       <img src="" alt="alt text for logo" />
@@ -21,7 +21,6 @@ export default function WelcomeScreen({ showModal, setShowModal }) {
         image after the item is added by touching the camera icon
       </p>
       <button onClick={() => setShowModal(true)}>Add Item</button>
-      <Modal showModal={showModal} onClose={() => setShowModal(false)} />
     </div>
   );
 }
