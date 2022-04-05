@@ -1,5 +1,6 @@
 //NPM packages
 import React from "react";
+import { ReactDOM } from "react";
 
 //Project files
 
@@ -12,6 +13,7 @@ export default function Modal({ showModal, onClose }) {
       <div className="overlay_style" />
       <div className="modal_styles">
         <button onClick={onClose}>Close modal</button>
+        <p>this is the modal</p>
       </div>
     </>
   );
