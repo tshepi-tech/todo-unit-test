@@ -1,5 +1,8 @@
+//NPM pacakges
 import { render, screen } from "@testing-library/react";
 
+//Project Files
+import Modal from "../components/Modal";
 import WelcomeScreen from "../screens/WelcomeScreen";
 
 test("renders the title of the page", async () => {
@@ -21,3 +24,43 @@ test("renders introduction information", async () => {
   );
   expect(paragraphElement).toBeInTheDocument();
 });
+
+//tests applies for both WelcomeScreen and ShoppingScreen.
+describe("Open/Close Modal", () => {
+  test("Opens when you pass true on showModal", async () => {
+    //Arrange
+    const testOpenModalState = [true, () => {}];
+    render(<Modal showModal={testOpenModalState} />);
+
+    // Act
+    const titleElement = screen.queryByText(/add a new product/i);
+
+    // Assert
+    expect(titleElement).toBeInTheDocument();
+  });
+
+  test("Don't open when you pass false on showModal", async () => {
+    //Arrange
+    const testCloseModalState = [false, () => {}];
+    render(<Modal showModal={testCloseModalState} />);
+
+    // Act
+    const titleElement = screen.queryByText(/add a new product/i);
+
+    // Assert
+    expect(titleElement).toBeInTheDocument();
+  });
+});
+
+/* test("Add item button passes true to ShowModal", async () => {
+  //Arrange
+  const testOpenModalState = [true, () => {}];
+  render(<Modal showModal={testOpenModalState} />);
+
+  //Act
+  const buttonElement = screen.getByRole("button", { name: /Add Item/i });
+  const titleElement = screen.queryByText(/add a new product/i);
+  fireEvent.click(buttonElement);
+  //Assert
+  expect(titleElement).toBeInTheDocument();
+}); */
