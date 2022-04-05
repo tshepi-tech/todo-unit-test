@@ -19,7 +19,12 @@ export default function App() {
 
   return (
     <div className="App">
-      {listLength > 0 && <ShoppingListScreen setShowModal={setShowModal} />}
+      {listLength > 0 && (
+        <ShoppingListScreen
+          listState={[list, setList]}
+          setShowModal={setShowModal}
+        />
+      )}
       {listLength === 0 && <WelcomeScreen setShowModal={setShowModal} />}
       <Modal
         listState={[list, setList]}
