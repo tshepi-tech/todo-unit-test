@@ -27,6 +27,7 @@ export default function Modal({ listState, modalState }) {
       id: list.length,
       name: name,
       price: price,
+      completed: false,
     };
     setList([...list, newItem]);
     console.log(list);
@@ -41,8 +42,8 @@ export default function Modal({ listState, modalState }) {
       <div className="modal_styles">
         <p>Add a new product</p>
         <form onSubmit={(event) => onSubmit(event)}>
-          <InputField setup={inputSetup.name} />
-          <InputField setup={inputSetup.price} />
+          <InputField state={[name, setName]} setup={inputSetup.name} />
+          <InputField state={[price, setPrice]} setup={inputSetup.price} />
           <button>Submit</button>
         </form>
       </div>

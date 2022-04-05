@@ -4,14 +4,21 @@ import React from "react";
 //Project files
 import inputSetup from "../data/inputSetup.json";
 
-export default function InputField({ setup }) {
+export default function InputField({ setup, state }) {
   const { label, placeholder, required, type } = setup;
+  const [setter, getter] = state;
 
   return (
     <div>
       <label>
         {label}
-        <input placholder={placeholder} required={required} type={type} />
+        <input
+          onChange={(event) => getter(event.target.value)}
+          placholder={placeholder}
+          required={required}
+          type={type}
+          value={setter}
+        />
       </label>
     </div>
   );
