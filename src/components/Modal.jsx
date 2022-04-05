@@ -51,6 +51,7 @@ export default function Modal({ listState, modalState }) {
           <InputField state={[name, setName]} setup={inputSetup.name} />
           <InputField state={[price, setPrice]} setup={inputSetup.price} />
           <button>Submit</button>
+          <button onClick={resetForm}>Cancel</button>
         </form>
       </div>
     </>
