@@ -21,7 +21,10 @@ export default function App() {
     <div className="App">
       {listLength > 0 && <ShoppingListScreen setShowModal={setShowModal} />}
       {listLength === 0 && <WelcomeScreen setShowModal={setShowModal} />}
-      <Modal showModal={showModal} onClose={() => setShowModal(false)} />
+      <Modal
+        listState={[list, setList]}
+        modalState={[showModal, setShowModal]}
+      />
     </div>
   );
 }
