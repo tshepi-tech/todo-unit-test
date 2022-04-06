@@ -14,7 +14,7 @@ export default function InputField({ setup, state }) {
         {label}
         <input
           onChange={(event) => getter(event.target.value)}
-          placholder={placeholder}
+          placeholder={placeholder}
           required={required}
           type={type}
           value={setter}
