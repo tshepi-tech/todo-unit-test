@@ -1,7 +1,7 @@
 {
   "name": {
     "label": "Product name",
-    "placeholder": "Leather sofa",
+    "placeholder": "Ex:Leather sofa",
     "required": true,
     "type": "text"
   },

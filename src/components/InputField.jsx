@@ -1,12 +1,9 @@
 //NPM packages
 import React from "react";
 
-//Project files
-import inputSetup from "../data/inputSetup.json";
-
-export default function InputField({ setup, state }) {
+export default function InputField({ setup, setter, getter }) {
   const { label, placeholder, required, type } = setup;
-  const [setter, getter] = state;
+  //const [setter, getter] = state;
 
   return (
     <div>

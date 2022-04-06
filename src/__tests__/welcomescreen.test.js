@@ -29,8 +29,9 @@ test("renders introduction information", async () => {
 describe("Open/Close Modal", () => {
   test("Opens when you pass true on showModal", async () => {
     //Arrange
+    const listState = [[], () => {}];
     const testOpenModalState = [true, () => {}];
-    render(<Modal showModal={testOpenModalState} />);
+    render(<Modal listState={listState} modalState={testOpenModalState} />);
 
     // Act
     const titleElement = screen.queryByText(/add a new product/i);
@@ -41,14 +42,15 @@ describe("Open/Close Modal", () => {
 
   test("Don't open when you pass false on showModal", async () => {
     //Arrange
+    const listState = [[], () => {}];
     const testCloseModalState = [false, () => {}];
-    render(<Modal showModal={testCloseModalState} />);
+    render(<Modal listState={listState} modalState={testCloseModalState} />);
 
     // Act
     const titleElement = screen.queryByText(/add a new product/i);
 
     // Assert
-    expect(titleElement).toBeInTheDocument();
+    expect(titleElement).not.toBeInTheDocument();
   });
 });
 
