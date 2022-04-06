@@ -5,32 +5,22 @@ import React, { useState } from "react";
 //Project files
 import inputSetup from "../data/inputSetup.json";
 import InputField from "./InputField";
+import { useProducts } from "../state/ProductContext";
 
-export default function Modal({ listState, modalState }) {
+export default function Modal({ modalState }) {
   const [showModal, setShowModal] = modalState;
-  const [list, setList] = listState;
+  const { addItem } = useProducts();
 
   //Local state
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
 
   //Methods
-
   function onSubmit(event) {
     event.preventDefault();
 
-    onAddItem(name, price);
+    addItem(name, price);
     resetForm();
-  }
-
-  function onAddItem(name, price) {
-    const newItem = {
-      id: list.length,
-      name: name,
-      price: price,
-      completed: false,
-    };
-    setList([...list, newItem]);
   }
 
   function resetForm() {
