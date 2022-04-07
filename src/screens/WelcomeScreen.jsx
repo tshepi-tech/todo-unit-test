@@ -1,9 +1,10 @@
 //NPM Packages
+
 import React from "react";
 
 //Project files
 //import welcomescreen from "../jsonFiles/welcomescreen.json";
-import Modal from "../components/Modal";
+import ModalForm from "../components/ModalForm";
 
 export default function WelcomeScreen({ setShowModal }) {
   return (
@@ -20,7 +21,11 @@ export default function WelcomeScreen({ setShowModal }) {
         the name and the price of the item you want to add. You can also and an
         image after the item is added by touching the camera icon
       </p>
-      <button onClick={() => setShowModal(true)}>Add Item</button>
+      <button
+        onClick={() => setShowModal(<ModalForm setShowModal={setShowModal} />)}
+      >
+        Add Item
+      </button>
     </div>
   );
 }

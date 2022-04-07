@@ -14,7 +14,7 @@ export default function App() {
   const { products } = useProducts();
 
   //Local state
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(null);
 
   //Properties
   const listLength = products.length;
