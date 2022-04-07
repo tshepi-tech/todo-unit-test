@@ -32,8 +32,10 @@ export default function ModalForm({ setShowModal }) {
     <div>
       <form onSubmit={(event) => onSubmit(event)}>
         <p>Add a new product</p>
-        <InputField state={[name, setName]} setup={inputSetup.name} />
-        <InputField state={[price, setPrice]} setup={inputSetup.price} />
+        {/* <InputField state={[name, setName]} setup={inputSetup.name} />
+        <InputField state={[price, setPrice]} setup={inputSetup.price} /> */}
+        <InputField getter={name} setter={setName} setup={inputSetup.name} />
+        <InputField getter={price} setter={setPrice} setup={inputSetup.price} />
         <button>Submit</button>
         <button onClick={resetForm}>Cancel</button>
       </form>

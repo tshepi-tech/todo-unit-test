@@ -3,6 +3,7 @@ import { render, screen, fireEvent } from "@testing-library/react";
 
 //Project files
 import InputField from "../components/InputField";
+
 import inputSetup from "../data/inputSetup.json";
 
 const mockedSetter = jest.fn();
@@ -30,7 +31,7 @@ describe("InputField name", () => {
     expect(inputElementPrice).toBeInTheDocument();
   });
 
-  /* test("should be able to type into product name input", async () => {
+  /*  test("should be able to type into product name input", async () => {
     //Arrange
     render(
       <InputField getter={[]} setter={mockedSetter} setup={inputSetup.name} />
@@ -41,8 +42,9 @@ describe("InputField name", () => {
     //Assert
     expect(inputElementName.value).toBe("Pillow");
   }); */
+});
 
-  /* test("should be able to type into product price input", async () => {
+/* test("should be able to type into product price input", async () => {
     //Arrange
     render(
       <InputField getter={[]} setter={mockedSetter} setup={inputSetup.price} />
@@ -53,4 +55,3 @@ describe("InputField name", () => {
     //Assert
     expect(inputElementPrice.value).toBe("300");
   }); */
-});
