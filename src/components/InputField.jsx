@@ -1,20 +1,20 @@
 //NPM packages
 import React from "react";
 
-export default function InputField({ setup, setter, getter }) {
+export default function InputField({ setup, state }) {
   const { label, placeholder, required, type } = setup;
-  //const [setter, getter] = state;
+  const [getter, setter] = state;
 
   return (
     <div>
       <label>
         {label}
         <input
-          onChange={(event) => getter(event.target.value)}
+          onChange={(event) => setter(event.target.value)}
           placeholder={placeholder}
           required={required}
           type={type}
-          value={setter}
+          value={getter}
         />
       </label>
     </div>
