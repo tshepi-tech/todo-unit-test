@@ -3,10 +3,13 @@ import React from "react";
 
 //Project files
 import TaskItem from "./TaskItem";
+import { useProducts } from "../state/ProductContext";
 
-export default function TaskList({ list /*onCheck*/ }) {
+export default function TaskList({ list }) {
+  const { onCheck } = useProducts();
+
   const Products = list.map((item) => (
-    <TaskItem key={item.id} item={item} /*onCheck={onCheck}*/ />
+    <TaskItem key={item.id} item={item} onCheck={onCheck} />
   ));
 
   //Safeguard

@@ -9,7 +9,7 @@ export function ProductProvider({ children }) {
   const [products, setProducts] = useState([]);
 
   //Properties
-  const values = { products, addItem };
+  const values = { products, addItem, updateItem };
 
   //Methods
   function addItem(name, price) {
@@ -20,6 +20,16 @@ export function ProductProvider({ children }) {
       completed: false,
     };
     setProducts([...products, newItem]);
+  }
+
+  function updateItem(updatedItem) {
+    const duplicatedList = [...products];
+    const index = duplicatedList.findIndex(
+      (item) => item.id === duplicatedList.id
+    );
+
+    duplicatedList[index] = updatedItem;
+    setProducts(duplicatedList);
   }
 
   return <Context.Provider value={values}>{children}</Context.Provider>;
