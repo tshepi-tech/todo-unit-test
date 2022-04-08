@@ -24,14 +24,12 @@ export function ProductProvider({ children }) {
   }
 
   function updateItem(updatedItem) {
-    const duplicatedList = [...products];
-    const index = duplicatedList.findIndex(
-      (item) => item.id === updatedItem.id
-    );
+    const copyList = [...products];
+    const index = copyList.findIndex((item) => item.id === updatedItem.id);
 
-    duplicatedList[index] = updatedItem;
-    setProducts(duplicatedList);
-    console.log("productcontext", duplicatedList);
+    copyList[index] = updatedItem;
+    setProducts(copyList);
+    console.log("productcontext", copyList);
   }
 
   return <Context.Provider value={values}>{children}</Context.Provider>;

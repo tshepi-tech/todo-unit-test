@@ -1,9 +1,4 @@
-//NPM Packages
-
-import React from "react";
-
 //Project files
-//import welcomescreen from "../jsonFiles/welcomescreen.json";
 import ModalForm from "../components/ModalForm";
 
 export default function WelcomeScreen({ setShowModal }) {
@@ -29,20 +24,3 @@ export default function WelcomeScreen({ setShowModal }) {
     </div>
   );
 }
-
-/* [
-    {
-        "image":"my image",
-    "imageAlt":"my alt",
-    "logo":"my logo",
-    "logoAlt":"my alt logo",
-    "title":"EIKA's shopping list",
-    "intro":" Welcome to EIKA’s shopping list. Here you will be able to create a todo
-    list with for the furniture you want to buy. ",
-    "instructions":" To get started press the Add new item button and a popup will ask you
-    the name and the price of the item you want to add. You can also and an
-    image after the item is added by touching the camera icon ",
-    "buttonText":"Add Item"
-}
-]
- */

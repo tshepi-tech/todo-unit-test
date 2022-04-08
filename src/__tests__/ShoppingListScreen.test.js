@@ -1,4 +1,4 @@
-/* //NPM packages
+//NPM packages
 import { render, screen } from "@testing-library/react";
 
 //Project files
@@ -10,6 +10,9 @@ const MockShoppingScreen = () => {
     <ShoppingListScreen />
   </ProductProvider>;
 };
+
+/* 
+
 
 const addItem = (name, price) => {
   const inputElementName = screen.getByPlaceholderText(/Ex:Leather sofa/i);
@@ -32,4 +35,9 @@ test("should render input", async () => {
 });
  */
 
-test("", () => {});
+test("should render Toggle button", async () => {
+  render(<MockShoppingScreen />);
+  const buttonElement = screen.queryByText("button", {
+    name: /View completed Items/i,
+  });
+});

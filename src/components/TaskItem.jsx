@@ -1,6 +1,3 @@
-//NPM packages
-import React from "react";
-
 //Project files
 import { useProducts } from "../state/ProductContext";
 

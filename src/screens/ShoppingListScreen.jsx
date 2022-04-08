@@ -1,5 +1,5 @@
 //NPM packages
-import React, { useState } from "react";
+import { useState } from "react";
 
 //Project files
 import ModalForm from "../components/ModalForm";
@@ -30,7 +30,7 @@ export default function ShoppingListScreen({ setShowModal }) {
           Add Item
         </button>
         <button onClick={() => setShowComplete(!showComplete)}>
-          {toggleLabel} completed items{" "}
+          {toggleLabel} completed items
         </button>
       </div>
       {showComplete && <TaskList list={completeItems} />}

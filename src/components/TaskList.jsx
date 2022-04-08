@@ -1,6 +1,3 @@
-//NPM package
-import React from "react";
-
 //Project files
 import TaskItem from "./TaskItem";
 
