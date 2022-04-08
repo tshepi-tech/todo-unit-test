@@ -1,0 +1,14 @@
+#welcome-screen h1 {
+  text-align: center;
+}
+
+#welcome-screen img {
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+}
+
+#welcome-screen .button {
+  display: block;
+  margin: 0 auto;
+}

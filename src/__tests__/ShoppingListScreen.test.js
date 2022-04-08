@@ -11,9 +11,17 @@ const MockShoppingScreen = () => {
   </ProductProvider>;
 };
 
+test("should render Toggle button", async () => {
+  //Arrange
+  render(<MockShoppingScreen />);
+  //Act
+  const buttonElement = screen.queryByText("button", {
+    name: /View completed Items/i,
+  });
+});
+
+//Tests that failed. My struggle was figureing out how to work with two inputs
 /* 
-
-
 const addItem = (name, price) => {
   const inputElementName = screen.getByPlaceholderText(/Ex:Leather sofa/i);
   const inputElementPrice = screen.getByPlaceholderText(/Ex: 3500/i);
@@ -34,10 +42,3 @@ test("should render input", async () => {
   expect(divElement).toBeInTheDocument();
 });
  */
-
-test("should render Toggle button", async () => {
-  render(<MockShoppingScreen />);
-  const buttonElement = screen.queryByText("button", {
-    name: /View completed Items/i,
-  });
-});

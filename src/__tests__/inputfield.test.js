@@ -31,6 +31,7 @@ describe("InputField name", () => {
     expect(inputElementPrice).toBeInTheDocument();
   });
 
+  //Tests that failed. I think it has to do with something about array being "" when you enter value for the first time. The console log also returns "" even thought the screen renders an input
   /*  test("should be able to type into product name input", async () => {
     //Arrange
     render(

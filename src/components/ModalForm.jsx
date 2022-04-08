@@ -35,7 +35,7 @@ export default function ModalForm({ setShowModal }) {
 
   return (
     <div>
-      <form onSubmit={(event) => onSubmit(event)}>
+      <form className="modal-form" onSubmit={(event) => onSubmit(event)}>
         <p>Add a new product</p>
         <InputField
           getter={name}

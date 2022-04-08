@@ -1,2 +1,9 @@
 @import "./portal.css";
 @import "./TaskItem.css";
+@import "./typography.css";
+@import "./variables.css";
+@import "./ShoppingScreen.css";
+
+@import "./Welcomescreen.css";
+@import "./TaskList.css";
+@import "./ModalForm.css";

@@ -1,0 +1,8 @@
+#shopping-screen h1 {
+  text-align: center;
+}
+
+#shopping-screen .buttons {
+  display: block;
+  margin: 0 auto;
+}

@@ -20,7 +20,7 @@ export default function InputField({ setup, getter, setter, validation }) {
 
   return (
     <div>
-      <label>
+      <label className="input-field">
         {label}
         <input
           onBlur={() => onValidate(validation, setter, setErrorText)}

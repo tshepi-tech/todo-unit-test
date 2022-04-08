@@ -15,8 +15,14 @@ export default function TaskItem({ item }) {
 
   return (
     <li className={`task-item ${complete && "completed"}`}>
-      <input type="checkbox" checked={complete} onChange={onCheck} />
-      <span className="name">{name}</span>,
+      <input
+        className="input-checkbox"
+        type="checkbox"
+        checked={complete}
+        onChange={onCheck}
+      />
+      <span className="name">{name}</span>
+      <span className="spacer">{/* to align items leave at blank */}</span>
       <span className="price">{price}</span>
     </li>
   );

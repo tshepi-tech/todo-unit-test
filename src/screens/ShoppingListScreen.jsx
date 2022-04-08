@@ -19,9 +19,9 @@ export default function ShoppingListScreen({ setShowModal }) {
 
   return (
     <div>
-      <div>
-        <h1>Shopping List </h1>
-        <TaskList list={pendingItems} />
+      <h1>Shopping List </h1>
+      <TaskList list={pendingItems} />
+      <div className="buttons">
         <button
           onClick={() =>
             setShowModal(<ModalForm setShowModal={setShowModal} />)
