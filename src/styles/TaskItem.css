@@ -1,0 +1,5 @@
+.task-item.completed .name,
+.task-item.completed .price {
+  color: gray;
+  text-decoration: line-through;
+}
