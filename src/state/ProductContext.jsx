@@ -20,7 +20,6 @@ export function ProductProvider({ children }) {
       complete: false,
     };
     setProducts([...products, newItem]);
-    console.log("products", products);
   }
 
   function updateItem(updatedItem) {
