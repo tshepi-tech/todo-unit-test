@@ -11,7 +11,7 @@ export default function ShoppingListScreen({ setShowModal }) {
   return (
     <div>
       <div>
-        <h1>Shopping List</h1>
+        <h1>Shopping List </h1>
         <TaskList list={products} /*onCheck={onCheck} */ />
         <button
           onClick={() =>

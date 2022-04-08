@@ -17,19 +17,21 @@ export function ProductProvider({ children }) {
       id: products.length,
       name: name,
       price: price,
-      completed: false,
+      complete: false,
     };
     setProducts([...products, newItem]);
+    console.log("products", products);
   }
 
   function updateItem(updatedItem) {
     const duplicatedList = [...products];
     const index = duplicatedList.findIndex(
-      (item) => item.id === duplicatedList.id
+      (item) => item.id === updatedItem.id
     );
 
     duplicatedList[index] = updatedItem;
     setProducts(duplicatedList);
+    console.log("productcontext", duplicatedList);
   }
 
   return <Context.Provider value={values}>{children}</Context.Provider>;
